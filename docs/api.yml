@@ -50,7 +50,7 @@ paths:
             schema:
               type: array
               items:
-                $ref: '#/components/schemas/Book'
+                $ref: '#/components/schemas/CrupdateBook'  # Use CrupdateBook instead of Book
       responses:
         200:
           description: The list of created or updated books
@@ -59,7 +59,8 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Book'
+                  $ref: '#/components/schemas/Book'  # Still use Book for the response
+
   /authors:
     get:
       summary: Get all authors
@@ -116,7 +117,8 @@ paths:
                 type: string
       responses:
         204:
-          description: The author(s) were successfully deleted.
+          description: The author(s) were successfully deleted
+
 components:
   schemas:
     Author:
@@ -132,14 +134,28 @@ components:
             - M
             - F
     Book:
+      allOf:
+        - $ref: '#/components/schemas/CrupdateBook'  # Inherit properties from CrupdateBook
+        - properties:
+            author:
+              type: object
+              properties:
+                id:
+                  type: string
+                name:
+                  type: string
+                sex:
+                  type: string
+                  enum:
+                    - M
+                    - F
+    CrupdateBook:
       type: object
       properties:
         id:
           type: string
         bookName:
           type: string
-        author:
-          $ref: '#/components/schemas/Author'
         pageNumbers:
           type: integer
         topic:
