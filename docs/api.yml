@@ -210,3 +210,16 @@ components:
           type: string
         authorId:
           type: string
+
+
+# 2. i. 
+# Cela est du au fait que lorsqu'on associe un autheur a un livre,
+# il faut specifier les identifiants des deux pour la relation. Donc les details
+# tes que les noms peuvent etre consulter en utilisant les identifiants pour récupérer 
+# les informations complètes à partir des composants CrupdateBook et Author.
+
+# 2. ii.
+# UpdateBookAuthor devrait avoir les propriétés de CrupdateBook et Author lors
+# des cas où l'association d'un auteur à un livre implique des modifications ou des 
+# mises à jour des informations spécifiques au livre ou à l'auteur en même temps que l'association. Comme 
+# par exemple l'ajout de nouvelles informations
