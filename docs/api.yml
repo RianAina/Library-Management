@@ -237,3 +237,7 @@ components:
 # des cas où l'association d'un auteur à un livre implique des modifications ou des 
 # mises à jour des informations spécifiques au livre ou à l'auteur en même temps que l'association. Comme 
 # par exemple l'ajout de nouvelles informations
+
+# 3. a.
+# Les paginations sont necessaires pour la gestion des donnees ainsi que pour la reduction des 
+# temps de reponses
