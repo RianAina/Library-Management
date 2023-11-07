@@ -255,3 +255,14 @@ components:
 # 3. a.
 # Les paginations sont necessaires pour la gestion des donnees ainsi que pour la reduction des 
 # temps de reponses
+
+# 4. a.
+# Peut-on gérer la pagination à travers les en-têtes de la requête ? 
+# Oui, il est possible de gérer la pagination en utilisant les en-têtes de la requête.
+# Je peux par exemple utiliser un en-tête personnalisé pour spécifier le numéro de page et la taille de la page. 
+
+# 4. b.
+# Doit-on gérer la pagination à travers les en-têtes de la requête ?
+# Oui, mais il vaut mieux utiliser les parametres pour avoir une bonne lisibilité et plus de facilité.
+# En plus, les en-en-têtes sont souvent utilisés pour des informations de controle, mais pas pour la 
+# pagination  
