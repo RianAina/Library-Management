@@ -210,6 +210,9 @@ components:
           enum:
             - M
             - F
+
+# allOf
+
     Book:
       allOf:
         - $ref: '#/components/schemas/CrupdateBook'
