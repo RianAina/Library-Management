@@ -7,7 +7,7 @@ servers:
   - url: https://libraryForBooks.com
 tags:
   - name: Books
-  - name: Author
+  - name: Authors
 paths:
   /books:
     get:
