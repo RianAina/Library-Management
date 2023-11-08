@@ -5,9 +5,14 @@ info:
   description: STD22074
 servers:
   - url: https://libraryForBooks.com
+tags:
+  - name: Books
+  - name: Author
 paths:
   /books:
     get:
+      tags: 
+        - "Books"
       summary: Get all books
       description: The returned books are ordered by updated datetime.
       operationId: getBooks
@@ -56,6 +61,8 @@ paths:
                 items:
                   $ref: '#/components/schemas/Book'
     put:
+      tags: 
+        - "Books"
       summary: Create or update a list of books
       operationId: crupdateBooks
       requestBody:
@@ -115,6 +122,8 @@ paths:
 
   /authors:
     get:
+      tags: 
+        - "Authors"
       summary: Get all authors
       operationId: getAuthors
       parameters:
@@ -148,6 +157,8 @@ paths:
                 items:
                   $ref: '#/components/schemas/Author'
     put:
+      tags: 
+        - "Authors"
       summary: Create or update a list of authors
       operationId: crupdateAuthors
       requestBody:
@@ -167,6 +178,8 @@ paths:
                 items:
                   $ref: '#/components/schemas/Author'
     delete:
+      tags: 
+        - "Authors"
       summary: Delete author(s)
       description: Deletes one or more authors by ID(s).
       operationId: deleteAuthors
